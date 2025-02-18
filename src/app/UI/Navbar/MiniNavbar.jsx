@@ -18,7 +18,7 @@ const sidebarVariants = {
     },
   }),
   closed: {
-    clipPath: "circle(30px at calc(100% - 40px) 40px)",
+    clipPath: "circle(0px at calc(100% - 43px) 47px)",
     backgroundColor: "#F7F7F7",
     opacity: 1,
     transition: {
@@ -59,7 +59,7 @@ export default function MainNavbar() {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
-      className={`fixed top-0 right-0 w-full h-full flex items-start overflow-hidden ${
+      className={`fixed top-[-9px] md:top-0 right-0 w-full h-full flex items-start overflow-hidden ${
         isOpen ? "pointer-events-auto" : "pointer-events-none"
       }`}
     >

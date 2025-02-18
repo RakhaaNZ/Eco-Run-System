@@ -23,7 +23,7 @@ const variants = {
   },
 };
 
-const colors = ["#393E46", "#393E46", "#393E46", "#393E46"];
+const colors = ["#000", "#000", "#000", "#000"];
 
 export const MenuItem = ({ label, i, link, closeSidebar }) => {
   const style = { border: `2px solid ${colors[i]}` };
@@ -41,7 +41,7 @@ export const MenuItem = ({ label, i, link, closeSidebar }) => {
         className="h-10 w-40 rounded bg-[#EEEEEE] flex items-center justify-center rounded-lg hover:shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#F7F7F7,0_0_15px_#F7F7F7,0_0_30px_#F7F7F7] cursor-pointer"
         style={style}
       >
-        <h1 className="text-[16px] text-[#171819] text-center font-bold">
+        <h1 className="text-[16px] text-[#000] text-center font-bold">
           {label}
         </h1>
       </motion.li>
