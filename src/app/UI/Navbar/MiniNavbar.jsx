@@ -59,7 +59,7 @@ export default function MainNavbar() {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
-      className={`fixed top-[-9px] md:top-0 right-0 w-full h-full flex items-start overflow-hidden ${
+      className={`fixed top-[-17px] md:top-[-9px] lg:top-0 right-0 w-full h-full flex items-start overflow-hidden ${
         isOpen ? "pointer-events-auto" : "pointer-events-none"
       }`}
     >
