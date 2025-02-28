@@ -20,13 +20,13 @@ const Navbar = () => {
         </div>
         {/* Desktop */}
         <div className="hidden lg:flex w-[85%] h-full flex-row justify-around gap-8 ml-[-120px] items-center px-[150px] text-[32px] font-[400]">
-          <Link href="#">
+          <Link href="#home">
             <h1>Home</h1>
           </Link>
-          <Link href="">
+          <Link href="#about">
             <h1>About</h1>
           </Link>
-          <Link href="">
+          <Link href="#details">
             <h1>Details</h1>
           </Link>
           <Link href="">

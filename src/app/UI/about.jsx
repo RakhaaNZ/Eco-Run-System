@@ -6,8 +6,11 @@ import Hero2 from "../../../public/Assets/Hero2.png";
 
 const About = () => {
   return (
-    <section className="relative w-screen h-full flex flex-col justify-center items-center">
-      <div className="relative flex flex-row justify-center items-center mb-[60px] mt-[20px]">
+    <section
+      id="about"
+      className="relative w-screen h-full flex flex-col justify-center items-center pt-[60px] md:pt-[80px] lg:pt-[100px]"
+    >
+      <div className="relative flex flex-row justify-center items-center mb-[60px]">
         <div className="absolute left-[-60px] md:left-[-140px] lg:left-[-250px]">
           <Image
             src={Leaf1}

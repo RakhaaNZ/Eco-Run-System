@@ -33,7 +33,7 @@ export const MenuItem = ({ label, i, link, closeSidebar }) => {
   };
 
   return (
-    <Link href={link} onClick={handleClick}>
+    <Link href={link} onClick={handleClick} passHref>
       <motion.li
         variants={variants}
         whileHover={{ scale: 1.1 }}

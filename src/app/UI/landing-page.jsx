@@ -5,7 +5,10 @@ import Hero from "../../../public/Assets/Hero1.png";
 
 const Landing = () => {
   return (
-    <section className="relative w-screen h-screen pt-[100px] flex justify-center items-center">
+    <section
+      id="home"
+      className="relative w-screen h-screen pt-[100px] flex justify-center items-center"
+    >
       <div className="container relative flex justify-center items-center w-full h-screen">
         <Image
           src={Hero}

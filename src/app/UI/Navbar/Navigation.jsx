@@ -4,9 +4,9 @@ import { MenuItem } from "./MenuItem";
 
 export const Navigation = ({ isOpen, closeSidebar }) => {
   const menuItems = [
-    { label: "Home", link: "/" },
-    { label: "About", link: "/#about" },
-    { label: "Details", link: "/projects" },
+    { label: "Home", link: "#home" },
+    { label: "About", link: "#about" },
+    { label: "Details", link: "#details" },
     { label: "Sponsorship", link: "/contact" },
   ];
 
