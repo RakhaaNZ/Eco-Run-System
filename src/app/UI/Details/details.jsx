@@ -1,5 +1,6 @@
 import React from "react";
 import Event from "./event-detail";
+import RaceKIT from "./race-kit";
 
 const Details = () => {
   return (
@@ -11,6 +12,7 @@ const Details = () => {
         <div className="h-[2px] md:h-[3px] lg:h-[4px] w-[170px] md:w-[300px] lg:w-[500px] bg-black"></div>
       </div>
       <Event />
+      <RaceKIT />
     </section>
   );
 };

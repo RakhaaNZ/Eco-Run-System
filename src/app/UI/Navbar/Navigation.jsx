@@ -1,8 +1,22 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
 
 export const Navigation = ({ isOpen, closeSidebar }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   const menuItems = [
     { label: "Home", link: "#home" },
     { label: "About", link: "#about" },

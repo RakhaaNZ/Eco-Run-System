@@ -77,7 +77,7 @@ export default function Event() {
                 className="w-[220px] md:w-[420px] h-auto"
               />
             </div>
-            <div className="flex flex-row gap-6 items-center">
+            <div className="flex flex-row gap-1 md:gap-6 items-center">
               <Image
                 src={LocationIcon}
                 alt=""
@@ -94,7 +94,7 @@ export default function Event() {
         <div className="flex flex-col gap-4 mt-[20px] md:mt-[40px]">
           <div>
             <h1 className="text-[14px] md:text-[20px] lg:text-[40px] font-[600]">
-              Register Now
+              Register
             </h1>
           </div>
           <div className="flex flex-col gap-2">
@@ -104,7 +104,7 @@ export default function Event() {
             >
               <div className="w-[120px] h-[25px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] flex justify-center items-center">
                 <h1 className="text-[10px] md:text-[14px] lg:text-[24px]">
-                  Register
+                  Register Now
                 </h1>
               </div>
             </Link>

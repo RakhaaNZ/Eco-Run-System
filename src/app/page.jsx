@@ -5,7 +5,7 @@ import Details from "./UI/Details/details";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <LandingPage />
       <About />
       <Details />
