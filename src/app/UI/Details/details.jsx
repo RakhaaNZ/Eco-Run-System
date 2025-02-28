@@ -1,6 +1,7 @@
 import React from "react";
 import Event from "./event-detail";
 import RaceKIT from "./race-kit";
+import GustStar from "./guest-star";
 
 const Details = () => {
   return (
@@ -13,6 +14,7 @@ const Details = () => {
       </div>
       <Event />
       <RaceKIT />
+      <GustStar />
     </section>
   );
 };
