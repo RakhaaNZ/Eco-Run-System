@@ -29,7 +29,7 @@ const Navbar = () => {
           <Link href="#details">
             <h1>Details</h1>
           </Link>
-          <Link href="">
+          <Link href="#sponsorship">
             <h1>Sponsorship</h1>
           </Link>
         </div>
