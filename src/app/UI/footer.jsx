@@ -4,7 +4,7 @@ import React from "react";
 import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import LogoEcoRun from "../../../public/Assets/logo-eco-run.png";
+import LogoEcoRun from "../../../public/Assets/Logo-eco-run.png";
 import LogoBless from "../../../public/Assets/Logo-bless.png";
 import IconWA from "../../../public/Assets/wa-icon.png";
 import IconEmail from "../../../public/Assets/email-icon.png";
