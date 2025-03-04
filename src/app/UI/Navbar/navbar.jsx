@@ -30,7 +30,7 @@ const Navbar = () => {
             <h1>Details</h1>
           </Link>
           <Link href="#sponsorship">
-            <h1>Sponsorship</h1>
+            <h1>Sponsors & Media</h1>
           </Link>
         </div>
         {/* // Mobile */}

@@ -15,7 +15,7 @@ import BIB2 from "../../../../public/Assets/bib-t.png";
 
 export default function RaceKIT() {
   return (
-    <section className="mt-[8rem]">
+    <section id="race" className="mt-[8rem]">
       <div className="flex justify-center items-center text-center mb-[60px]">
         <h1 className="text-[26px] md:text-[42px] lg:text-[64px] font-[600] lg:font-[700]">
           Race KIT

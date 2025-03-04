@@ -8,7 +8,7 @@ import LocationIcon from "../../../../public/Assets/location-icon.png";
 
 export default function Event() {
   return (
-    <section>
+    <section id="event">
       <div className="flex justify-center items-center text-center mb-[60px]">
         <h1 className="text-[26px] md:text-[42px] lg:text-[64px] font-[600] lg:font-[700]">
           Event

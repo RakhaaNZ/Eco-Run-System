@@ -13,7 +13,7 @@ const Landing = () => {
         <Image
           src={Hero}
           alt="Background Image"
-          className="object-cover w-auto h-auto px-[20px] md:px-[40px]"
+          className="object-cover w-auto h-auto px-[20px] md:px-[100px]"
         />
         <div className="absolute inset-0 container h-full max-h-[200px] md:max-h-[300px] flex items-center justify-start px-4 ">
           <div className="h-auto w-full max-w-[500px] md:max-w-[600px] px-4 md:px-6 lg:px-10 mt-[60px]">

@@ -21,7 +21,7 @@ export const Navigation = ({ isOpen, closeSidebar }) => {
     { label: "Home", link: "#home" },
     { label: "About", link: "#about" },
     { label: "Details", link: "#details" },
-    { label: "Sponsorship", link: "#sponsorship" },
+    { label: "Sponsors & Media", link: "#sponsorship" },
   ];
 
   const containerVariants = {

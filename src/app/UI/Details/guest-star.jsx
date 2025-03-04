@@ -7,14 +7,14 @@ import Berlin from "../../../../public/Assets/dj-berlin.png";
 
 export default function GuestStar() {
   return (
-    <section className="mt-[8rem]">
+    <section id="guest" className="mt-[8rem]">
       <div className="flex justify-center items-center text-center mb-[60px]">
         <h1 className="text-[26px] md:text-[42px] lg:text-[64px] font-[600] lg:font-[700]">
           Guest Star
         </h1>
       </div>
 
-      <div className="relative flex justify-center items-center w-full h-auto px-[40px] md:px-[60px] lg:px-[100px]">
+      <div className="relative flex justify-center items-center w-full h-auto px-[40px] md:px-[60px] lg:px-[100px] my-[50px]">
         <div className="flex flex-wrap gap-[100px] w-full max-w-[700px] md:max-w-[1300px] h-auto justify-around items-center">
           <div className="w-[250px] md:w-[500px] h-auto flex justify-around items-center">
             <div className="relative flex flex-col justify-center items-center w-[250px] md:w-[500px] h-[350px] md:h-[600px]">

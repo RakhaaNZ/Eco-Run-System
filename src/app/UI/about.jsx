@@ -76,7 +76,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="relative w-screen top-[-30px] md:top-[-130px] lg:top-[-180px]">
+        <div className="relative w-screen py-[50px] top-[-10px] md:top-[0px]">
           <Image
             src={Hero2}
             alt="Hero2 Image"

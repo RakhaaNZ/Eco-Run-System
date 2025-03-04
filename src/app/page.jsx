@@ -12,7 +12,7 @@ export default function Home() {
       <About />
       <Details />
       <Sponsorship />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }

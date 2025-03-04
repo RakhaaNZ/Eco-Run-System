@@ -6,8 +6,8 @@ import InstaPost from "./instapost";
 
 const Details = () => {
   return (
-    <section id="details" className="">
-      <div className="flex flex-col justify-center items-center text-center">
+    <section id="details">
+      <div className="flex flex-col justify-center items-center text-center pt-[60px] md:pt-[80px] lg:pt-[100px]">
         <h1 className="text-[26px] md:text-[42px] lg:text-[64px] font-[600] lg:font-[700]">
           Details
         </h1>
