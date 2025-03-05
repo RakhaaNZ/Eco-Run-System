@@ -25,7 +25,7 @@ export default function RaceKIT() {
       <div className="relative flex justify-center items-center w-full h-auto px-[0px] md:px-[60px] lg:px-[100px]">
         <div className="flex flex-wrap gap-[20px] 2xl:gap-[100px] w-full max-w-[700px] md:max-w-[1300px] h-auto justify-center items-center">
           {/* jersey */}
-          <div className="relative w-[250px] h-[300px] md:w-[550px] md:h-[500px] flex justify-center items-center mt-[-50px] md:mt-0">
+          <div className="relative w-[250px] h-[300px] md:w-[550px] md:h-[500px] flex justify-center items-center mt-[-50px] md:mt-0 group">
             <div className="-z-10 absolute left-[-15px] md:left-[-20px] top-[15px] md:top-[30px]">
               <Image
                 src={Jersey1}
