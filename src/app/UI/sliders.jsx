@@ -3,25 +3,24 @@ import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
 const sponsors = [
-  "/assets/sponsors/sponsor1.jpg",
-  "/assets/sponsors/sponsor2.png",
-  "/assets/sponsors/sponsor3.png",
-  "/assets/sponsors/sponsor4.png",
-  "/assets/sponsors/sponsor5.jpg",
-  "/assets/sponsors/sponsor6.png",
-  "/assets/sponsors/sponsor7.png",
-  "/assets/sponsors/sponsor8.png",
-  "/assets/sponsors/sponsor9.jpeg",
-  "/assets/sponsors/sponsor10.jpeg",
-  "/assets/sponsors/sponsor11.png",
+  "/Assets/sponsors/sponsor1.jpg",
+  "/Assets/sponsors/sponsor2.png",
+  "/Assets/sponsors/sponsor3.png",
+  "/Assets/sponsors/sponsor4.png",
+  "/Assets/sponsors/sponsor5.jpg",
+  "/Assets/sponsors/sponsor6.png",
+  "/Assets/sponsors/sponsor7.png",
+  "/Assets/sponsors/sponsor8.png",
+  "/Assets/sponsors/sponsor9.jpeg",
+  "/Assets/sponsors/sponsor10.jpeg",
 ];
 
 const media = [
-  "/assets/media/media1.png",
-  "/assets/media/media2.png",
-  "/assets/media/media3.jpg",
-  "/assets/media/media4.png",
-  "/assets/media/media5.png",
+  "/Assets/media/media1.png",
+  "/Assets/media/media2.png",
+  "/Assets/media/media3.jpg",
+  "/Assets/media/media4.PNG",
+  "/Assets/media/media5.PNG",
 ];
 
 const Sliders = () => {

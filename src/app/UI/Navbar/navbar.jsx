@@ -20,19 +20,21 @@ const Navbar = () => {
         </div>
         {/* Desktop */}
         <div className="hidden lg:flex w-[85%] h-full flex-row justify-around gap-8 ml-[-120px] items-center px-[150px] text-[32px] font-[400]">
-          <Link href="#home">
-            <h1>Home</h1>
-          </Link>
-          <Link href="#about">
-            <h1>About</h1>
-          </Link>
-          <Link href="#details">
-            <h1>Details</h1>
-          </Link>
-          <Link href="#sponsorship">
-            <h1>Sponsors & Media</h1>
-          </Link>
+          {[
+            { name: "Home", href: "#home" },
+            { name: "About", href: "#about" },
+            { name: "Details", href: "#details" },
+            { name: "Sponsors & Media", href: "#sponsorship" },
+          ].map((item, index) => (
+            <Link key={index} href={item.href} className="relative group">
+              <h1 className="transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:bg-gradient-to-r from-[#37A71F] to-[#8CD223] group-hover:text-transparent group-hover:bg-clip-text">
+                {item.name}
+                <span className="absolute left-0 bottom-0 w-0 h-[3px] bg-[#99FF00] transition-all duration-300 group-hover:w-full"></span>
+              </h1>
+            </Link>
+          ))}
         </div>
+
         {/* // Mobile */}
         <div className="lg:hidden w-screen h-screen pt-[100px]">
           <MiniNavbar />

@@ -1,12 +1,51 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Date from "../../../../public/Assets/date-icon.png";
-import Clock from "../../../../public/Assets/clock-icon.png";
+import DateIcon from "../../../../public/Assets/date-icon.png";
+import ClockIcon from "../../../../public/Assets/clock-icon.png";
 import LocationImg from "../../../../public/Assets/location-img.png";
 import LocationIcon from "../../../../public/Assets/location-icon.png";
 
 export default function Event() {
+  // Target waktu: 19 April 2025, pukul 23:59:00 (Waktu Lokal)
+  const targetDate = new Date("2025-04-19T23:59:00").getTime();
+
+  const calculateTimeLeft = () => {
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference <= 0) {
+      return { days: "00", hours: "00", minutes: "00", seconds: "00" };
+    }
+
+    const days = String(
+      Math.floor(difference / (1000 * 60 * 60 * 24))
+    ).padStart(2, "0");
+    const hours = String(
+      Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    ).padStart(2, "0");
+    const minutes = String(
+      Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+    ).padStart(2, "0");
+    const seconds = String(
+      Math.floor((difference % (1000 * 60)) / 1000)
+    ).padStart(2, "0");
+
+    return { days, hours, minutes, seconds };
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
   return (
     <section id="event">
       <div className="flex justify-center items-center text-center mb-[60px]">
@@ -38,7 +77,7 @@ export default function Event() {
               <div className="flex flex-row gap-1 md:gap-6 items-center">
                 <div className="flex justify-center w-[50px]">
                   <Image
-                    src={Date}
+                    src={DateIcon}
                     alt="Date Icon"
                     className="w-[25px] md:w-[35px] lg:w-[45px] h-auto"
                   />
@@ -51,7 +90,7 @@ export default function Event() {
               <div className="flex flex-row gap-1 md:gap-6 items-center">
                 <div className="flex justify-center w-[50px]">
                   <Image
-                    src={Clock}
+                    src={ClockIcon}
                     alt="Clock Icon"
                     className="w-[20px] h-[20px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] mx-[4px]"
                   />
@@ -100,13 +139,12 @@ export default function Event() {
           <div className="flex flex-col gap-2">
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSe1GWo7wPvc4iOOKiGCnflyaZOS5qniHl45Sq3LsQwlhSgssA/viewform?usp=dialog"
-              className="w-[120px] h-[25px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px]"
+              className="relative w-[120px] h-[25px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] hover:font-[700] flex justify-center items-center overflow-hidden group transition-all duration-300 ease-in-out active:scale-95 hover:shadow-[0_0_15px_#99FF00] hover:border-[#99FF00]"
             >
-              <div className="w-[120px] h-[25px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] flex justify-center items-center">
-                <h1 className="text-[10px] md:text-[14px] lg:text-[24px]">
-                  Register Now
-                </h1>
-              </div>
+              <div className="absolute inset-0 bg-[#99FF00] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out "></div>
+              <h1 className="relative z-10 text-[10px] md:text-[14px] lg:text-[24px] text-black group-hover:text-white transition-all duration-600">
+                Register Now
+              </h1>
             </Link>
             <div className="w-[120px] h-[25px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] flex justify-center items-center">
               <div className="w-[40%] h-full flex justify-center items-center bg-black">
@@ -115,8 +153,9 @@ export default function Event() {
                 </h1>
               </div>
               <div className="w-[60%] flex justify-center items-center">
-                <p className="text-[10px] md:text-[14px] lg:text-[24px]">
-                  10:10:10:10
+                <p className="text-[10px] md:text-[14px] lg:text-[24px] tracking-[2px]">
+                  {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:
+                  {timeLeft.seconds}
                 </p>
               </div>
             </div>

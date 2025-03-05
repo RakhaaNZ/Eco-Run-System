@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import LogoEcoRun from "../../../public/Assets/Logo-eco-run.png";
@@ -9,8 +9,12 @@ import LogoBless from "../../../public/Assets/Logo-bless.png";
 import IconWA from "../../../public/Assets/wa-icon.png";
 import IconEmail from "../../../public/Assets/email-icon.png";
 import IconIG from "../../../public/Assets/ig-icon.png";
+import IconCopy from "../../../public/Assets/copy-icon.png";
+import IconCheck from "../../../public/Assets/check-icon.png";
 
 export default function Footer() {
+  const [isWhatsAppOpen, setIsWhatsAppOpen] = useState(false);
+  const [isEmailOpen, setIsEmailOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const numberRef = useRef(null);
 
@@ -19,10 +23,21 @@ export default function Footer() {
       navigator.clipboard.writeText(numberRef.current.innerText);
       setCopied(true);
 
-      // Reset copied state after 2 seconds
       setTimeout(() => setCopied(false), 2000);
     }
   };
+
+  useEffect(() => {
+    if (isWhatsAppOpen || isEmailOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isWhatsAppOpen, isEmailOpen]);
 
   return (
     <section className="relative flex flex-col pt-[60px] md:pt-[80px] lg:pt-[100px]">
@@ -54,10 +69,10 @@ export default function Footer() {
           <div className="mt-[-10px] lg:mt-0">
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSe1GWo7wPvc4iOOKiGCnflyaZOS5qniHl45Sq3LsQwlhSgssA/viewform?usp=dialog"
-              className="w-[200px] h-[25px] md:w-[300px] md:h-[35px] lg:w-[400px] lg:h-[50px]"
+              className="w-[200px] h-[25px] md:w-[300px] md:h-[35px] lg:w-[400px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] hover:font-[700] flex justify-center items-center overflow-hidden group transition-all duration-300 ease-in-out active:scale-95 hover:shadow-[0_0_15px_#99FF00] hover:border-[#99FF00]"
             >
-              <div className="w-[200px] h-[25px] md:w-[300px] md:h-[35px] lg:w-[400px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[8px] md:rounded-[14px] lg:rounded-[20px] flex justify-center items-center">
-                <h1 className="text-[10px] md:text-[14px] lg:text-[24px]">
+              <div className="w-[200px] h-[25px] md:w-[300px] md:h-[35px] lg:w-[400px] lg:h-[50px] flex justify-center items-center">
+                <h1 className="relative z-10 text-[10px] md:text-[14px] lg:text-[24px] text-black transition-all duration-600">
                   Register Now
                 </h1>
               </div>
@@ -83,7 +98,11 @@ export default function Footer() {
           </div>
           <div className="flex flex-row gap-4 md:gap-6 lg:gap-8 justify-center items-center mt-[5px] md:mt-[10px] lg:mt-0">
             <div>
-              <button popoverTarget="my-popover" className="trigger-btn">
+              <button
+                onClick={() => setIsWhatsAppOpen(true)}
+                popoverTarget="my-popover"
+                className="trigger-btn"
+              >
                 {" "}
                 <Image
                   src={IconWA}
@@ -92,54 +111,112 @@ export default function Footer() {
                 />{" "}
               </button>
               {/* Elemen Popover */}
-              <div
-                id="my-popover"
-                popover="true"
-                className="z-50 bg-black/20 w-full h-auto fixed inset-0 items-center justify-center "
-              >
-                <div className="w-full h-auto fixed inset-0 flex items-center justify-center ">
-                  <div className="p-4 rounded-lg shadow-lg bg-white">
-                    <h1>WhatsApp Number</h1>
-                    <div className="flex flex-col items-center gap-2 p-4 border rounded-md shadow-md bg-white">
-                      {/* Box yang berisi nomor */}
+              {isWhatsAppOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                  <div className="flex flex-col text-[18px] items-center gap-2 p-4 border border-black rounded-md shadow-md bg-white">
+                    <h1 className="text-[20px] font-[600]">WhatsApp Number</h1>
+                    <h1 className="flex mt-[-12px]">( Bless Event Planner )</h1>
+                    <div className="bg-black/20 w-full h-auto flex flex-row rounded-md pl-[19px] border-[1px] border-black">
                       <div
                         ref={numberRef}
-                        className="px-4 py-2 border rounded-md text-lg font-semibold bg-gray-100"
+                        className="px-4 py-2 text-lg font-semibold"
                       >
-                        081234567890
+                        +62 819-3210-8860
                       </div>
-
-                      {/* Tombol Copy */}
-                      <button
+                      <div
                         onClick={handleCopy}
-                        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+                        className="text-white pt-1 pr-1 rounded-md cursor-pointer transition flex justify-end items-start"
                       >
-                        {copied ? "Copied!" : "Copy"}
-                      </button>
+                        {copied ? (
+                          <Image
+                            src={IconCheck}
+                            alt="Icon Check"
+                            className="w-[15px] h-auto"
+                          />
+                        ) : (
+                          <Image
+                            src={IconCopy}
+                            alt="Icon Copy"
+                            className="w-[15px] h-auto"
+                          />
+                        )}
+                      </div>
                     </div>
                     <button
-                      popoverTarget="my-popover"
-                      popoverTargetAction="hide"
+                      onClick={() => setIsWhatsAppOpen(false)}
+                      className="w-full h-auto px-2 border border-black rounded-[6px] hover:bg-black hover:text-white"
                     >
-                      Close
+                      <h1>Close</h1>
                     </button>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
+
             <div>
-              <Image
-                src={IconEmail}
-                alt="Icon Email"
-                className="w-[20px] md:w-[30px] lg:w-[40px] h-auto"
-              />
+              <button
+                onClick={() => setIsEmailOpen(true)}
+                popoverTarget="my-popover2"
+                className="trigger-btn2"
+              >
+                {" "}
+                <Image
+                  src={IconEmail}
+                  alt="Icon Email"
+                  className="w-[15px] md:w-[25px] lg:w-[35px] h-auto"
+                />{" "}
+              </button>
+              {/* Elemen Popover */}
+              {isEmailOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                  <div className="flex flex-col text-[18px] items-center gap-2 p-4 border border-black rounded-md shadow-md bg-white">
+                    <h1 className="text-[20px] font-[600]">Email</h1>
+                    <h1 className="flex mt-[-12px]">( Bless Event Planner )</h1>
+                    <div className="bg-black/20 w-full h-auto flex flex-row rounded-md pl-[19px] border-[1px] border-black">
+                      <div
+                        ref={numberRef}
+                        className="px-4 py-2 text-lg font-semibold"
+                      >
+                        blesseventplanners@gmail.com
+                      </div>
+                      <div
+                        onClick={handleCopy}
+                        className="text-white pt-1 pr-1 rounded-md cursor-pointer transition flex justify-end items-start"
+                      >
+                        {copied ? (
+                          <Image
+                            src={IconCheck}
+                            alt="Icon Check"
+                            className="w-[15px] h-auto"
+                          />
+                        ) : (
+                          <Image
+                            src={IconCopy}
+                            alt="Icon Copy"
+                            className="w-[15px] h-auto"
+                          />
+                        )}
+                      </div>
+                    </div>
+                    <button
+                      onClick={() => setIsEmailOpen(false)}
+                      className="w-full h-auto px-2 border border-black rounded-[6px] hover:bg-black hover:text-white"
+                    >
+                      <h1>Close</h1>
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
+
             <div>
-              <Image
-                src={IconIG}
-                alt="Icon IG"
-                className="w-[15px] md:w-[25px] lg:w-[35px] h-auto"
-              />
+              <Link href="https://www.instagram.com/blesseventplanner/#">
+                <Image
+                  src={IconIG}
+                  alt="Icon IG"
+                  className="w-[15px] md:w-[25px] lg:w-[35px] h-auto pb-[6px]"
+                />
+              </Link>
             </div>
           </div>
         </div>
