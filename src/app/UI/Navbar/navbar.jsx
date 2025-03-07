@@ -12,11 +12,13 @@ const Navbar = () => {
     >
       <div className="w-screen h-full relative flex flex-row bg-white/80">
         <div className="w-[40%] md:w-[30%] lg:w-[18%] px-[10px] flex justify-center items-center">
-          <Image
-            src={LogoEcoRun}
-            alt="EcoRun Logo Image"
-            className="h-auto w-[45px] md:w-[65px] lg:w-[80px]"
-          />
+          <Link href="https://eco-run-system.vercel.app/">
+            <Image
+              src={LogoEcoRun}
+              alt="EcoRun Logo Image"
+              className="h-auto w-[45px] md:w-[65px] lg:w-[80px]"
+            />
+          </Link>
         </div>
         {/* Desktop */}
         <div className="hidden lg:flex w-[85%] h-full flex-row justify-around gap-8 ml-[-120px] items-center px-[150px] text-[32px] font-[400]">

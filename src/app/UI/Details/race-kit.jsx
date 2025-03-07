@@ -139,7 +139,7 @@ export default function RaceKIT() {
               <Image
                 src={BIB2}
                 alt="decoration"
-                className="w-[75px] md:w-[160px] h-auto group-hover:scale-[1.1] transition-all duration-500 ease-in-out"
+                className="w-[75px] md:w-[160px] h-auto"
               />
             </div>
             <div className="z-10 w-[200px] h-[200px] md:w-[400px] md:h-[400px] border-[3px] border-black rounded-[8px] mb-[40px] shadow-[10px_10px_15px_rgba(0,0,0,0.25)] ">
@@ -148,7 +148,7 @@ export default function RaceKIT() {
                   <Image
                     src={BIB}
                     alt="BIB Image"
-                    className="w-[120px] md:w-[250px] h-auto"
+                    className="w-[120px] md:w-[250px] h-auto group-hover:scale-[1.1] transition-all duration-500 ease-in-out"
                   />
                 </div>
               </div>
