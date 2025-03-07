@@ -11,7 +11,7 @@ import LocationIcon from "../../../../public/Assets/location-icon.png";
 
 export default function Event() {
   // Target waktu: 19 April 2025, pukul 23:59:00 (Waktu Lokal)
-  const targetDate = new Date("2025-04-19T23:59:00").getTime();
+  const targetDate = new Date("2025-04-14T23:59:00").getTime();
 
   const calculateTimeLeft = () => {
     const now = new Date().getTime();
@@ -61,7 +61,7 @@ export default function Event() {
               <h1 className="text-[14px] md:text-[20px] lg:text-[40px] font-[600]">
                 Description
               </h1>
-              <p className="text-[12px] md:text-[18px] lg:text-[30px] font-[400] text-wrap">
+              <p className="text-[12px] md:text-[18px] lg:text-[30px] font-[400] text-balance">
                 Join our exciting Fun Run with a unique route through Singaraja!
                 Experience the thrill of running while enjoying interactive
                 educational activities and mini-games along the way. The fun
@@ -109,14 +109,14 @@ export default function Event() {
                 Event Location
               </h1>
             </div>
-            <div>
+            <div className="flex justify-center items-center">
               <Image
                 src={LocationImg}
                 alt="Location Img"
                 className="w-[220px] md:w-[420px] h-auto"
               />
             </div>
-            <div className="flex flex-row gap-1 md:gap-6 items-center">
+            <div className="flex flex-row gap-1 md:gap-6 justify-center items-center">
               <Image
                 src={LocationIcon}
                 alt=""
@@ -139,15 +139,15 @@ export default function Event() {
           <div className="flex flex-col gap-2">
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSe1GWo7wPvc4iOOKiGCnflyaZOS5qniHl45Sq3LsQwlhSgssA/viewform?usp=dialog"
-              className="relative w-[120px] h-[25px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] hover:font-[700] flex justify-center items-center overflow-hidden group transition-all duration-300 ease-in-out active:scale-95 hover:shadow-[0_0_15px_#99FF00] hover:border-[#99FF00]"
+              className="relative w-full h-[30px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] hover:font-[700] flex justify-center items-center overflow-hidden group transition-all duration-300 ease-in-out active:scale-95 hover:shadow-[0_0_15px_#81E900] hover:border-[#81E900]"
             >
-              <div className="absolute inset-0 bg-[#99FF00] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out "></div>
+              <div className="absolute inset-0 bg-[#81E900] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out "></div>
               <h1 className="relative z-10 text-[10px] md:text-[14px] lg:text-[24px] text-black group-hover:text-white transition-all duration-600">
                 Register Now
               </h1>
             </Link>
-            <div className="w-[120px] h-[25px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] flex justify-center items-center">
-              <div className="w-[40%] h-full flex justify-center items-center bg-black">
+            <div className="w-full h-[30px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] flex justify-center items-center">
+              <div className="w-[40%] h-full flex justify-center items-center bg-black border-r-[3px] border-black rounded-l-[3px] md:rounded-l-[4px] lg:rounded-l-[5px]">
                 <h1 className="text-white text-[10px] md:text-[14px] lg:text-[24px]">
                   Countdown
                 </h1>

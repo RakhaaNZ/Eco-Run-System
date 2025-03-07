@@ -26,14 +26,14 @@ export default function RaceKIT() {
         <div className="flex flex-wrap gap-[20px] 2xl:gap-[100px] w-full max-w-[700px] md:max-w-[1300px] h-auto justify-center items-center">
           {/* jersey */}
           <div className="relative w-[250px] h-[300px] md:w-[550px] md:h-[500px] flex justify-center items-center mt-[-50px] md:mt-0 group">
-            <div className="-z-10 absolute left-[-15px] md:left-[-20px] top-[15px] md:top-[30px]">
+            <div className="-z-10 absolute left-[-15px] md:left-[-20px] top-[15px] md:top-[30px] md:group-hover:left-[410px] md:group-hover:scale-x-[-1] transition-all duration-500 ease-in-out">
               <Image
                 src={Jersey1}
                 alt="decoration"
                 className="w-[80px] md:w-[150px] h-auto"
               />
             </div>
-            <div className="z-20 absolute right-[8px] md:right-[40px] top-[40px]">
+            <div className="z-20 absolute right-[8px] md:right-[40px] top-[40px] md:group-hover:right-[430px] md:group-hover:scale-x-[-1] transition-all duration-500 ease-in-out">
               <Image
                 src={Jersey2}
                 alt="decoration"
@@ -46,7 +46,7 @@ export default function RaceKIT() {
                   <Image
                     src={Jersey}
                     alt="Jersey Image"
-                    className="w-[150px] md:w-[300px] h-auto"
+                    className="w-[150px] md:w-[300px] h-auto group-hover:scale-[1.1] transition-all duration-500 ease-in-out"
                   />
                 </div>
               </div>
@@ -59,15 +59,15 @@ export default function RaceKIT() {
           </div>
 
           {/* medal */}
-          <div className="relative w-[250px] h-[300px] md:w-[550px] md:h-[500px] flex justify-center items-center mt-[-50px] md:mt-0">
-            <div className="-z-10 absolute left-[-25px] md:left-[-20px] bottom-[100px] md:bottom-[102px]">
+          <div className="relative w-[250px] h-[300px] md:w-[550px] md:h-[500px] flex justify-center items-center mt-[-50px] md:mt-0 group">
+            <div className="-z-10 absolute left-[-25px] md:left-[-20px] bottom-[100px] md:bottom-[102px] md:group-hover:left-[400px] md:group-hover:scale-x-[-1] transition-all duration-500 ease-in-out">
               <Image
                 src={Medal1}
                 alt="decoration"
                 className="w-[80px] md:w-[150px] h-auto"
               />
             </div>
-            <div className="z-20 absolute right-[-28px] md:right-[-40px] top-[5px] md:top-[-30px]">
+            <div className="z-20 absolute right-[-28px] md:right-[-40px] top-[5px] md:top-[-30px] md:group-hover:right-[350px] md:group-hover:scale-x-[-1] transition-all duration-500 ease-in-out">
               <Image
                 src={Medal2}
                 alt="decoration"
@@ -80,7 +80,7 @@ export default function RaceKIT() {
                   <Image
                     src={Medal}
                     alt="Medal Image"
-                    className="w-auto h-[120px] md:h-[200px]"
+                    className="w-auto h-[120px] md:h-[200px] group-hover:scale-[1.1] transition-all duration-500 ease-in-out"
                   />
                 </div>
               </div>
@@ -93,15 +93,15 @@ export default function RaceKIT() {
           </div>
 
           {/* goodiebag */}
-          <div className="relative w-[250px] h-[300px] md:w-[550px] md:h-[500px] flex justify-center items-center mt-[-50px] md:mt-0">
-            <div className="z-20 absolute left-[-20px] md:left-[-20px] top-[40px] md:top-[80px]">
+          <div className="relative w-[250px] h-[300px] md:w-[550px] md:h-[500px] flex justify-center items-center mt-[-50px] md:mt-0 group">
+            <div className="z-20 absolute left-[-20px] md:left-[-20px] top-[40px] md:top-[80px] md:group-hover:left-[400px] md:group-hover:scale-x-[-1] transition-all duration-500 ease-in-out">
               <Image
                 src={Goodiebag2}
                 alt="decoration"
                 className="w-[85px] md:w-[155px] h-auto"
               />
             </div>
-            <div className="z-20 absolute right-[20px] md:right-[80px] bottom-[118px] md:bottom-[138px]">
+            <div className="z-20 absolute right-[20px] md:right-[80px] bottom-[118px] md:bottom-[138px] md:group-hover:right-[400px] md:group-hover:scale-x-[-1] transition-all duration-500 ease-in-out">
               <Image
                 src={Goodiebag1}
                 alt="decoration"
@@ -114,7 +114,7 @@ export default function RaceKIT() {
                   <Image
                     src={Goodiebag}
                     alt="Goodiebag Image"
-                    className="w-[90px] md:w-[200px] h-auto"
+                    className="w-[90px] md:w-[200px] h-auto group-hover:scale-[1.1] transition-all duration-500 ease-in-out"
                   />
                 </div>
               </div>
@@ -127,19 +127,19 @@ export default function RaceKIT() {
           </div>
 
           {/* bib */}
-          <div className="relative w-[250px] h-[300px] md:w-[550px] md:h-[500px] flex justify-center items-center mt-[-50px] md:mt-0">
-            <div className="-z-10 absolute left-[-15px] md:left-[-50px] top-[5px] md:top-[-22px]">
+          <div className="relative w-[250px] h-[300px] md:w-[550px] md:h-[500px] flex justify-center items-center mt-[-50px] md:mt-0 group">
+            <div className="-z-10 absolute left-[-15px] md:left-[-50px] top-[5px] md:top-[-22px] md:group-hover:left-[350px] md:group-hover:scale-x-[-1] transition-all duration-500 ease-in-out">
               <Image
                 src={BIB1}
                 alt="decoration"
                 className="w-[105px] md:w-[210px] h-auto"
               />
             </div>
-            <div className="z-20 absolute right-[25px] md:right-[67px] bottom-[117px] md:bottom-[136px]">
+            <div className="z-20 absolute right-[25px] md:right-[67px] bottom-[117px] md:bottom-[136px] md:group-hover:right-[310px] md:group-hover:scale-x-[-1] transition-all duration-500 ease-in-out">
               <Image
                 src={BIB2}
                 alt="decoration"
-                className="w-[75px] md:w-[160px] h-auto"
+                className="w-[75px] md:w-[160px] h-auto group-hover:scale-[1.1] transition-all duration-500 ease-in-out"
               />
             </div>
             <div className="z-10 w-[200px] h-[200px] md:w-[400px] md:h-[400px] border-[3px] border-black rounded-[8px] mb-[40px] shadow-[10px_10px_15px_rgba(0,0,0,0.25)] ">

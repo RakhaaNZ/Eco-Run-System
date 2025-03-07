@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import Leaf1 from "../../../public/Assets/Leaf1.png";
-import Leaf2 from "../../../public/Assets/Leaf2.png";
+import Cloud1 from "../../../public/Assets/medal-t.png";
+import Cloud2 from "../../../public/Assets/bib-b.png";
 import Hero2 from "../../../public/Assets/Hero2.png";
 
 const About = () => {
@@ -11,11 +11,11 @@ const About = () => {
       className="relative w-screen h-full flex flex-col justify-center items-center pt-[60px] md:pt-[80px] lg:pt-[100px]"
     >
       <div className="relative flex flex-row justify-center items-center mb-[60px]">
-        <div className="absolute left-[-60px] md:left-[-140px] lg:left-[-250px]">
+        <div className="absolute left-[-70px] top-[10px] md:left-[-140px] md:top-[40px] lg:left-[-250px]">
           <Image
-            src={Leaf1}
-            alt="Leaf Image"
-            className="h-auto w-[25px] md:w-[45px] lg:w-[80px]"
+            src={Cloud2}
+            alt="Decoration Image"
+            className="h-auto w-[55px] md:w-[100px] lg:w-[150px]"
           />
         </div>
         <div className="flex flex-col justify-center items-center text-center">
@@ -70,9 +70,9 @@ const About = () => {
           </div>
           <div className="relative right-[-20px]">
             <Image
-              src={Leaf2}
+              src={Cloud1}
               alt="Leaf Image"
-              className="h-auto w-[25px] md:w-[55px] lg:w-[100px]"
+              className="h-auto w-[65px] md:w-[105px] lg:w-[150px]"
             />
           </div>
         </div>

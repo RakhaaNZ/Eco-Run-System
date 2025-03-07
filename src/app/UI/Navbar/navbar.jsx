@@ -36,7 +36,7 @@ const Navbar = () => {
         </div>
 
         {/* // Mobile */}
-        <div className="lg:hidden w-screen h-screen pt-[100px]">
+        <div className="lg:hidden lg:-z-50 lg:w-screen lg:h-screen pt-[100px]">
           <MiniNavbar />
         </div>
       </div>

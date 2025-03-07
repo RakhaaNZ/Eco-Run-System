@@ -69,7 +69,7 @@ export default function Footer() {
           <div className="mt-[-10px] lg:mt-0">
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSe1GWo7wPvc4iOOKiGCnflyaZOS5qniHl45Sq3LsQwlhSgssA/viewform?usp=dialog"
-              className="w-[200px] h-[25px] md:w-[300px] md:h-[35px] lg:w-[400px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] hover:font-[700] flex justify-center items-center overflow-hidden group transition-all duration-300 ease-in-out active:scale-95 hover:shadow-[0_0_15px_#99FF00] hover:border-[#99FF00]"
+              className="w-[200px] h-[25px] md:w-[300px] md:h-[35px] lg:w-[400px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] hover:font-[700] flex justify-center items-center overflow-hidden group transition-all duration-300 ease-in-out active:scale-95 hover:shadow-[0_0_15px_#81E900] hover:border-[#81E900]"
             >
               <div className="w-[200px] h-[25px] md:w-[300px] md:h-[35px] lg:w-[400px] lg:h-[50px] flex justify-center items-center">
                 <h1 className="relative z-10 text-[10px] md:text-[14px] lg:text-[24px] text-black transition-all duration-600">
@@ -113,15 +113,17 @@ export default function Footer() {
               {/* Elemen Popover */}
               {isWhatsAppOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                  <div className="flex flex-col text-[18px] items-center gap-2 p-4 border border-black rounded-md shadow-md bg-white">
+                  <div className="flex flex-col w-full max-w-[300px] text-[18px] items-center gap-2 p-4 border border-black rounded-md shadow-md bg-white">
                     <h1 className="text-[20px] font-[600]">WhatsApp Number</h1>
                     <h1 className="flex mt-[-12px]">( Bless Event Planner )</h1>
-                    <div className="bg-black/20 w-full h-auto flex flex-row rounded-md pl-[19px] border-[1px] border-black">
-                      <div
-                        ref={numberRef}
-                        className="px-4 py-2 text-lg font-semibold"
-                      >
-                        +62 819-3210-8860
+                    <div className="bg-black/20 w-full h-auto flex flex-row justify-between rounded-md pl-[19px] border-[1px] border-black">
+                      <div className="px-4 py-2 text-lg font-semibold flex justify-center items-center w-full">
+                        <div
+                          ref={numberRef}
+                          className="text-lg font-semibold flex justify-center items-center"
+                        >
+                          +62 819-3210-8860
+                        </div>
                       </div>
                       <div
                         onClick={handleCopy}
@@ -169,19 +171,21 @@ export default function Footer() {
               {/* Elemen Popover */}
               {isEmailOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                  <div className="flex flex-col text-[18px] items-center gap-2 p-4 border border-black rounded-md shadow-md bg-white">
+                  <div className="flex w-full max-w-[300px] mx-[200px] flex-col text-[18px] items-center gap-2 p-4 border border-black rounded-md shadow-md bg-white">
                     <h1 className="text-[20px] font-[600]">Email</h1>
                     <h1 className="flex mt-[-12px]">( Bless Event Planner )</h1>
-                    <div className="bg-black/20 w-full h-auto flex flex-row rounded-md pl-[19px] border-[1px] border-black">
-                      <div
-                        ref={numberRef}
-                        className="px-4 py-2 text-lg font-semibold"
-                      >
-                        blesseventplanners@gmail.com
+                    <div className="bg-black/20 w-full h-auto flex flex-row justify-between rounded-md pl-[19px] border-[1px] border-black">
+                      <div className="px-4 py-2 text-lg font-semibold flex justify-center items-center w-full">
+                        <div
+                          ref={numberRef}
+                          className="text-lg font-semibold flex justify-center items-center"
+                        >
+                          blesseventplanner@gmail.com
+                        </div>
                       </div>
                       <div
                         onClick={handleCopy}
-                        className="text-white pt-1 pr-1 rounded-md cursor-pointer transition flex justify-end items-start"
+                        className="w-[20px] text-white pt-1 pr-1 rounded-md cursor-pointer transition flex justify-end items-start"
                       >
                         {copied ? (
                           <Image
@@ -257,7 +261,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-screen h-[6px] md:h-[8px] lg:h-[10px] bg-[#99FF00]"></div>
+        <div className="w-screen h-[6px] md:h-[8px] lg:h-[10px] bg-[#81E900]"></div>
       </div>
     </section>
   );

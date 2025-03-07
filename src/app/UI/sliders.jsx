@@ -13,6 +13,7 @@ const sponsors = [
   "/Assets/sponsors/sponsor8.png",
   "/Assets/sponsors/sponsor9.jpeg",
   "/Assets/sponsors/sponsor10.jpeg",
+  "/Assets/sponsors/sponsor11.png",
 ];
 
 const media = [
@@ -36,7 +37,7 @@ const Sliders = () => {
           {[...sponsors].map((src, index) => (
             <div
               key={index}
-              className="w-20 md:w-30 lg:w-40 mx-[30px] md:mx-[50px] lg:mx-[70px] flex-shrink-0"
+              className="w-20 md:w-30 lg:w-40 mx-[10px] md:mx-[50px] lg:mx-[70px] flex-shrink-0"
             >
               <Image
                 src={src}
@@ -60,7 +61,7 @@ const Sliders = () => {
           {[...media].map((src, index) => (
             <div
               key={index}
-              className="w-20 md:w-30 lg:w-40 mx-[30px] md:mx-[50px] lg:mx-[70px] flex-shrink-0"
+              className="w-20 md:w-30 lg:w-40 mx-[10px] md:mx-[50px] lg:mx-[70px] flex-shrink-0"
             >
               <Image
                 src={src}

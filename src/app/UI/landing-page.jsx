@@ -26,9 +26,9 @@ const Landing = () => {
               </p>
               <Link
                 href="https://docs.google.com/forms/d/e/1FAIpQLSe1GWo7wPvc4iOOKiGCnflyaZOS5qniHl45Sq3LsQwlhSgssA/viewform?usp=dialog"
-                className="relative w-[100px] md:w-[150px] lg:w-[200px] h-[20px] md:h-[30px] lg:h-[45px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] hover:font-[700] flex justify-center items-center overflow-hidden group transition-all duration-300 ease-in-out active:scale-95 hover:shadow-[0_0_15px_#99FF00] hover:border-[#99FF00]"
+                className="relative w-[100px] md:w-[150px] lg:w-[200px] h-[20px] md:h-[30px] lg:h-[45px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] hover:font-[700] flex justify-center items-center overflow-hidden group transition-all duration-300 ease-in-out active:scale-95 hover:shadow-[0_0_15px_#81E900] hover:border-[#81E900]"
               >
-                <div className="absolute inset-0 bg-[#99FF00] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out "></div>
+                <div className="absolute inset-0 bg-[#81E900] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out "></div>
                 <h1 className="relative z-10 text-[10px] md:text-[14px] lg:text-[24px] text-black group-hover:text-white  transition-all duration-700">
                   Register Now
                 </h1>
