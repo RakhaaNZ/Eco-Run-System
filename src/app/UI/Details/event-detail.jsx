@@ -139,7 +139,7 @@ export default function Event() {
           <div className="flex flex-col gap-2">
             <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSe1GWo7wPvc4iOOKiGCnflyaZOS5qniHl45Sq3LsQwlhSgssA/viewform?usp=dialog"
-              className="relative w-full h-[30px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] hover:font-[700] flex justify-center items-center overflow-hidden group transition-all duration-300 ease-in-out active:scale-95 hover:shadow-[0_0_15px_#81E900] hover:border-[#81E900]"
+              className="relative w-full h-[30px] md:w-[500px] md:h-[35px] lg:w-[700px] lg:h-[55px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] hover:font-[700] flex justify-center items-center overflow-hidden group transition-all duration-300 ease-in-out active:scale-95 hover:shadow-[0_0_15px_#81E900] hover:border-[#81E900]"
             >
               <div className="absolute inset-0 bg-[#81E900] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out "></div>
               <h1 className="relative z-10 text-[10px] md:text-[14px] lg:text-[24px] text-black group-hover:text-white transition-all duration-600">
