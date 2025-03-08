@@ -80,7 +80,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="relative lg:absolute bottom-0 lg:bottom-[70px] right-0 lg:right-[120px] flex flex-col justify-center items-center mb-[20px] lg:mb-0 gap-2 lg:gap-0">
+        <div
+          id="contact"
+          className="relative lg:absolute bottom-0 lg:bottom-[70px] right-0 lg:right-[120px] flex flex-col justify-center items-center mb-[20px] lg:mb-0 gap-2 lg:gap-0"
+        >
           <div className="flex items-left w-full">
             <h1 className="text-[10px] md:text-[18px] lg:text-[24px] font-[400]">
               Organized By :

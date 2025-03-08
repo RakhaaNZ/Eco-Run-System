@@ -23,7 +23,7 @@ const variants = {
   },
 };
 
-const colors = ["#000", "#000", "#000", "#000"];
+const colors = ["#000", "#000", "#000", "#000", "#000"];
 
 export const MenuItem = ({ label, i, link, closeSidebar }) => {
   const style = { border: `2px solid ${colors[i]}` };
