@@ -146,17 +146,40 @@ export default function Event() {
                 Register Now
               </h1>
             </Link>
-            <div className="w-full h-[30px] md:w-[190px] md:h-[35px] lg:w-[280px] lg:h-[50px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] flex justify-center items-center">
-              <div className="w-[40%] h-full flex justify-center items-center bg-black border-r-[3px] border-black rounded-l-[3px] md:rounded-l-[4px] lg:rounded-l-[5px]">
+            <div className="w-full h-auto md:w-[500px] md:h-[40px] lg:w-[700px] lg:h-[65px] border-[1px] md:border-[2px] lg:border-[3px] border-black rounded-[4px] md:rounded-[6px] lg:rounded-[8px] flex flex-col md:flex-row justify-center items-center">
+              <div className="w-[100%] h-[20px] md:w-[40%] md:h-full flex justify-center items-center bg-black border-r-[3px] border-black rounded-l-[3px] md:rounded-l-[4px] lg:rounded-l-[5px]">
                 <h1 className="text-white text-[10px] md:text-[14px] lg:text-[24px]">
                   Countdown
                 </h1>
               </div>
-              <div className="w-[60%] flex justify-center items-center">
-                <p className="text-[10px] md:text-[14px] lg:text-[24px] tracking-[2px]">
-                  {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:
-                  {timeLeft.seconds}
-                </p>
+              <div className="w-[100%] h-auto py-[10px] md:w-[60%] flex justify-center items-center">
+                <div className="flex flex-row flex flex-wrap justify-center gap-3 items-center text-[10px] md:text-[14px] lg:text-[24px] tracking-[2px]">
+                  <div className="flex flex-col justify-center items-center leading-[1]">
+                    <h1 className="font-[600]">Days</h1>
+                    <p>{timeLeft.days}</p>
+                  </div>
+                  <div className="flex flex-col justify-center items-center leading-[1]">
+                    <h1 className="font-[600]">:</h1>
+                  </div>
+                  <div className="flex flex-col justify-center items-center leading-[1]">
+                    <h1 className="font-[600]">Hours</h1>
+                    <p>{timeLeft.hours}</p>
+                  </div>
+                  <div className="flex flex-col justify-center items-center leading-[1]">
+                    <h1 className="font-[600]">:</h1>
+                  </div>
+                  <div className="flex flex-col justify-center items-center leading-[1]">
+                    <h1 className="font-[600]">Minutes</h1>
+                    <p>{timeLeft.minutes}</p>
+                  </div>
+                  <div className="flex flex-col justify-center items-center leading-[1]">
+                    <h1 className="font-[600]">:</h1>
+                  </div>
+                  <div className="flex flex-col justify-center items-center leading-[1]">
+                    <h1 className="font-[600]">Seconds</h1>
+                    <p>{timeLeft.seconds}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
